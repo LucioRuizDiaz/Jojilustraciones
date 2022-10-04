@@ -1,0 +1,13 @@
+Componentes Funcionales:
+    -importar React
+    -debe tener una funcion
+    -el nombre de la funcion tiene que empezar con mayuscula  
+    -las funciones tienen que tener un return (siempre debe ser un solo elemento padre)
+    -se tiene que exportar las funciones
+    
+
+Componentes:
+    -Props
+    -Estados
+    -Ciclo de vida
+    -Metodos del ciclo de vida
