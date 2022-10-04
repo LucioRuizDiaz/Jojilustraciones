@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from "../../assets/logo.jpeg";
+import logo from "../../multimedia/img/logo.png";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { styles } from "./Navbar.style";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <header style={styles.container}>
-      <img style={styles.images} src="" alt="tienda online" />
+      <img style={styles.images} src={logo} alt="tienda online" />
       <h1 style={styles.titulo}> Jojilustraciones</h1>
       <nav>
         {categorias.map((categoria) => {
