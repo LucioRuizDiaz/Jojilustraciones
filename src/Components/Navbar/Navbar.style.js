@@ -13,7 +13,6 @@ export const styles = {
   images: {
     height: "90%",
     marginLeft: 5,
-    // borderRadius: 8,
   },
   categorias: {
     margin: 20,

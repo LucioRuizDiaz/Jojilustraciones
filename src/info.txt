@@ -11,3 +11,9 @@ Componentes:
     -Estados
     -Ciclo de vida
     -Metodos del ciclo de vida
+
+Hooks:
+    -Comienzan con "use"
+    -Se declaran dentro de un Componente
+    -Son funciones
+    -No se pueden declarar dentro de condicionales (if) 

@@ -5,11 +5,22 @@ import { ItemListContainer } from "./Components/ItemListContainer/ItemListContai
 
 const App = () => {
   const mensaje = "Bienvenido a Jojilustraciones";
+  const stock = 9;
+  const inicial = 1;
+
+  const onAdd = () => {
+    console.log("Agregado al carrito!");
+  };
 
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting={mensaje} />
+      <ItemListContainer
+        greeting={mensaje}
+        stock={stock}
+        inicial={inicial}
+        onAdd={onAdd}
+      />
     </>
   );
 };
