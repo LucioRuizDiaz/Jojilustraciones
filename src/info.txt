@@ -17,3 +17,8 @@ Hooks:
     -Se declaran dentro de un Componente
     -Son funciones
     -No se pueden declarar dentro de condicionales (if) 
+
+Ciclo de vida de componentes y metodos:
+    -Montaje(mount)
+    -Actualizaciones(update)
+    -Desmontaje(unmount)
