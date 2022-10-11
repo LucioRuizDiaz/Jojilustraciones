@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export const ItemCount = ({ stock, inicial, onAdd }) => {
   const [cont, setCont] = useState(inicial);
