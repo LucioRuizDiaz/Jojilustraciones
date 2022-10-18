@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
   return (
@@ -11,7 +12,7 @@ const Item = ({ producto }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="200"
+          height="400"
           image={producto.image}
           alt={producto.title}
         />
@@ -25,9 +26,11 @@ const Item = ({ producto }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Ver más
-        </Button>
+        <Link to={"/producto/" + producto.id}>
+          <Button size="small" color="primary">
+            Ver más
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );
