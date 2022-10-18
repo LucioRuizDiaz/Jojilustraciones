@@ -1,0 +1,14 @@
+[
+  { "nombre": "Evangelion", "id": 0, "stock": 10, "precio": 950, "imagen": "" },
+  { "nombre": "Avatar", "id": 1, "stock": 12, "precio": 940, "imagen": "" },
+  { "nombre": "BLAST", "id": 2, "stock": 12, "precio": 350, "imagen": "" },
+  { "nombre": "TRAPNEST", "id": 3, "stock": 10, "precio": 350, "imagen": "" },
+  {
+    "nombre": "Hunter x Hunter",
+    "id": 4,
+    "stock": 8,
+    "precio": 550,
+    "imagen": ""
+  },
+  { "nombre": "Deathnote", "id": 5, "stock": 8, "precio": 600, "imagen": "" }
+]

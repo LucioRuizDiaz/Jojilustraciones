@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
-import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
+import { ItemListContainer } from "./Containers/ItemListContainer/ItemListContainer";
 
 const App = () => {
   const mensaje = "Bienvenido a Jojilustraciones";
