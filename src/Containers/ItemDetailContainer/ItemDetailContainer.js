@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 export const ItemDetailContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -30,7 +32,11 @@ export const ItemDetailContainer = () => {
       {
         <>
           {cargando ? (
-            <h1>Cargando....</h1>
+            <Box
+              sx={{ display: "flex", justifyContent: "center", marginTop: 50 }}
+            >
+              <CircularProgress color="secondary" />
+            </Box>
           ) : (
             <ItemDetail
               productos={productos}

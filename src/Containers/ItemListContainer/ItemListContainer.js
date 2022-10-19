@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 // import { ItemCount } from "./ItemCount";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 export const ItemListContainer = ({ greeting }) => {
   // const stock = 0;
@@ -42,7 +44,11 @@ export const ItemListContainer = ({ greeting }) => {
       {
         <>
           {cargando ? (
-            <h1>Cargando....</h1>
+            <Box
+              sx={{ display: "flex", justifyContent: "center", marginTop: 50 }}
+            >
+              <CircularProgress color="secondary" />
+            </Box>
           ) : (
             <ItemList productos={productos} />
           )}
