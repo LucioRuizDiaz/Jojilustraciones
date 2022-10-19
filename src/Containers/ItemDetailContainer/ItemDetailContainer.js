@@ -38,10 +38,7 @@ export const ItemDetailContainer = () => {
               <CircularProgress color="secondary" />
             </Box>
           ) : (
-            <ItemDetail
-              productos={productos}
-              style={{ display: "flex", justifyContent: "center" }}
-            />
+            <ItemDetail productos={productos} />
           )}
         </>
       }
