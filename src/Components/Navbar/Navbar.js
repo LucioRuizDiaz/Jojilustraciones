@@ -32,8 +32,9 @@ const Navbar = () => {
           );
         })}
       </nav>
-
-      <CartWidget />
+      <NavLink to="/cart">
+        <CartWidget />
+      </NavLink>
     </header>
   );
 };
