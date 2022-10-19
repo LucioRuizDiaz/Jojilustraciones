@@ -1,0 +1,3 @@
+Hola! Para esta entrega use la api que uso el profe en clase porque no lo pude hacer andar con el products.json 
+que trate de armar pero cuando veamos FireBase lo voy a subir ahi y usarlo.
+Gracias!
