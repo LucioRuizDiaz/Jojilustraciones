@@ -1,43 +1,39 @@
 import React, { useEffect, useState } from "react";
-// import { ItemCount } from "./ItemCount";
+
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { dataBase } from "../../../firebase/firebase";
 
 export const ItemListContainer = ({ greeting }) => {
-  // const stock = 0;
-  // const inicial = 1;
-
-  // const onAdd = (cont) => {
-  //   console.log(`Agregado ${cont} productos al carrito!`);
-  // };
-
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
 
   const { id } = useParams();
 
-  const URL_BASE = "https://fakestoreapi.com/products";
-  const URL_ID = `${URL_BASE}/category/${id}`;
+  const productCollection = collection(dataBase, "productos");
+  const productQuery = id
+    ? query(productCollection, where("category", "==", id))
+    : productCollection;
 
   useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const response = await fetch(id ? URL_ID : URL_BASE);
-        const data = await response.json();
-
-        setProductos(data);
-      } catch {
-        console.log("error");
-      } finally {
-        setCargando(false);
-      }
-    };
-
-    getProducts();
+    getDocs(productQuery)
+      .then((result) => {
+        const listProducts = result.docs.map((item) => {
+          return {
+            ...item.data(),
+            id: item.id,
+          };
+        });
+        setProductos(listProducts);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(setCargando(false));
   }, [id]);
-
   return (
     <>
       <h2>{greeting}</h2>
@@ -54,8 +50,6 @@ export const ItemListContainer = ({ greeting }) => {
           )}
         </>
       }
-
-      {/* <ItemCount stock={stock} inicial={inicial} onAdd={onAdd} /> */}
     </>
   );
 };

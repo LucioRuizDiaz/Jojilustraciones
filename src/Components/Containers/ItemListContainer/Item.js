@@ -12,9 +12,9 @@ const Item = ({ producto }) => {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="400"
           image={producto.image}
           alt={producto.title}
+          style={style.img}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -39,8 +39,12 @@ const Item = ({ producto }) => {
 const style = {
   card: {
     width: "30vw",
-    height: "60vh",
+    height: "100vh",
     marginBottom: 25,
+  },
+
+  img: {
+    height: "70vh",
   },
 };
 
