@@ -26,8 +26,8 @@ export const ItemDetail = ({ productos }) => {
     <div style={style.container}>
       <Card style={style.card} sx={{ width: "80%" }}>
         <CardMedia
+          style={style.img}
           component="img"
-          height="100%"
           image={productos.image}
           alt={productos.title}
         />
@@ -75,7 +75,11 @@ const style = {
   cardContent: {
     height: "100%",
     content: "center",
-    width: "40vw",
+    width: "30%",
+  },
+  img: {
+    height: "100%",
+    width: "70%",
   },
 };
 

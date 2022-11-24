@@ -21,7 +21,7 @@ export const ItemCount = ({ stock, inicial, onAdd }) => {
           <p style={styles.num}>{cont}</p>
           <button onClick={clickAdd}>Sumar</button>
         </div>
-        <div>
+        <div style={styles.add}>
           <button disabled={stock === 0} onClick={clickOnAdd}>
             Agregar
           </button>
@@ -41,7 +41,7 @@ const styles = {
   container: {
     height: 70,
     display: "flex",
-    justifyContent: "spaceAround",
+    justifyContent: "center",
     flexDirection: "column",
   },
   botones: {
@@ -50,5 +50,9 @@ const styles = {
     justifyContent: "center",
     marginBottom: 10,
   },
-  num: {},
+  add: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: 20,
+  },
 };
